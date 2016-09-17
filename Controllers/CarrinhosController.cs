@@ -27,10 +27,10 @@ namespace gerenciamentoCarrinhoService.Controllers
         [HttpPut("{id}/livro/{idLivro}")]
         public IActionResult adicionarLivro(int id, int idLivro)
         {
-            if (!isAuthenticated().Result) {
+            //if (!isAuthenticated().Result) {
                 // return Forbid(); TODO: Verificar: retorna erro no servidor
-                return Unauthorized();
-            }
+            //    return Unauthorized();
+            //}
 
             Carrinho c = null;
             carrinhos.TryGetValue(id, out c);
@@ -49,10 +49,10 @@ namespace gerenciamentoCarrinhoService.Controllers
         [HttpDelete("{id}")]
         public IActionResult EsvaziarCarrinho(int id)
         {
-            if (!isAuthenticated().Result) {
+            //if (!isAuthenticated().Result) {
                 // return Forbid(); TODO: Verificar: retorna erro no servidor
-                return Unauthorized();
-            }
+            //    return Unauthorized();
+            //}
 
             Carrinho c = null;
             carrinhos.TryGetValue(id, out c);
@@ -67,10 +67,10 @@ namespace gerenciamentoCarrinhoService.Controllers
         [HttpGet("{id}")]
         public IActionResult ConsultarLivrosCarrinho(int id)
         {
-            if (!isAuthenticated().Result) {
+            //if (!isAuthenticated().Result) {
                 // return Forbid(); TODO: Verificar: retorna erro no servidor
-                return Unauthorized();
-            }
+            //    return Unauthorized();
+            //}
             
             Carrinho c = null;
             carrinhos.TryGetValue(id, out c);
